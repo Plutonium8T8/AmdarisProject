@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarApp", "CarApp\CarApp.csproj", "{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
