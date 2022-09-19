@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity.Repository.Interfaces
+namespace Entity
 {
-    internal interface IRepository<T> : IDisposable
+    public interface IRepository<T> : IDisposable
     {
         IEnumerable<T> GetEntityList();
         Task<T> GetEntity(long id);

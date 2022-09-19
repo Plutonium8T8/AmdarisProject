@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class GenericRepository : IRepository<T> where T : Class
+    public interface IAppContext
     {
+        
     }
 }
