@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebAPI.Model.DataTransferObject.Payment;
 using WebAPI.Model.DataTransferObject.User;
-using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 
 namespace WebAPI.Controllers

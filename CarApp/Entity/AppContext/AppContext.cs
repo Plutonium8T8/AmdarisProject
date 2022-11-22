@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Entity.Models;
+using Entity.Models.Roles;
+using Entity.Models.Offers;
+using Entity.Models.Users;
 
 namespace Entity
 {
@@ -23,7 +26,7 @@ namespace Entity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

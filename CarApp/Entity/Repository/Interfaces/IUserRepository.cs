@@ -1,11 +1,12 @@
-﻿using Entity.Models;
+﻿using Entity.Models.Offers;
+using Entity.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Entity.Repository.Interfaces
 {
     public interface IUserRepository : IRepository<User>
     {

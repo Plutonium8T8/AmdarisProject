@@ -1,4 +1,6 @@
-﻿namespace Entity.Models
+﻿using Entity.Models.Users;
+
+namespace Entity.Models
 {
     public class CSVFile : EntityBaseClass
     {

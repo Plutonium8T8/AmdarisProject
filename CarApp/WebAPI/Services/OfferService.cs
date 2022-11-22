@@ -1,13 +1,13 @@
 ﻿using AutoMapper;
 using Others.Exceptions;
-using Entity.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.Model.DataTransferObject.Offer;
 using WebAPI.Services.Interfaces;
-using Entity;
+using Entity.Models.Offers;
+using Entity.Repository.Interfaces;
 
 namespace WebAPI.Services
 {

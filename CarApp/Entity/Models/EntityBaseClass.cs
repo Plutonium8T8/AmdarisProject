@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Entity
+namespace Entity.Models
 {
     public abstract class EntityBaseClass
     {

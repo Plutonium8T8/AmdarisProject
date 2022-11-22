@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Entity.Models.Users;
+using Entity.Models.Cars;
 
-namespace Entity.Models
+namespace Entity.Models.Offers
 {
     public class Offer : EntityBaseClass
     {

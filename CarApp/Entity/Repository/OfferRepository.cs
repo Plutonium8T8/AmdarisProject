@@ -1,10 +1,12 @@
-﻿using Entity.Models;
+﻿using Entity.Models.Offers;
+using Entity.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Entity;
 
-namespace Entity
+namespace Entity.Repository
 {
     public class OfferRepository : GenericRepository<Offer>, IOfferRepository
     {
@@ -13,11 +15,9 @@ namespace Entity
 
         }
 
-        public async Task<Offer> CreateOffer(Offer offer)
+        public async Task CreateOffer(Offer offer)
         {
-            await base.Create(offer);
-
-            return offer;
+            await Create(offer);
         }
 
         public async Task DeleteOffer(long id)
@@ -34,11 +34,9 @@ namespace Entity
             return result;
         }
 
-        public async Task<Offer> UpdateOffer(Offer offer)
+        public async Task UpdateOffer(Offer offer)
         {
-            await base.Update(offer);
-
-            return offer;
+            await Update(offer);
         }
     }
 }

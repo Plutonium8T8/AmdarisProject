@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebAPI.Model.AuthOptions
+namespace WebAPI.Model.Helpers
 {
     public class AuthOptions
     {

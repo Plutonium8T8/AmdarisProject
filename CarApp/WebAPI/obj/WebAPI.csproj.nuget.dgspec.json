@@ -245,14 +245,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\CarApp\\AmdarisProject\\CarApp\\Common\\Common.csproj": {
-                "projectPath": "D:\\CarApp\\AmdarisProject\\CarApp\\Common\\Common.csproj"
-              },
               "D:\\CarApp\\AmdarisProject\\CarApp\\Entity\\Entity.csproj": {
                 "projectPath": "D:\\CarApp\\AmdarisProject\\CarApp\\Entity\\Entity.csproj"
-              },
-              "D:\\CarApp\\AmdarisProject\\CarApp\\KeyVaultRead\\KeyVaultRead.csproj": {
-                "projectPath": "D:\\CarApp\\AmdarisProject\\CarApp\\KeyVaultRead\\KeyVaultRead.csproj"
               },
               "D:\\CarApp\\AmdarisProject\\CarApp\\KeyVR\\KeyVR.csproj": {
                 "projectPath": "D:\\CarApp\\AmdarisProject\\CarApp\\KeyVR\\KeyVR.csproj"
@@ -287,11 +281,11 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[5.0.1, )"
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Logging": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             },
             "Serilog.Extensions.Logging.File": {
               "target": "Package",

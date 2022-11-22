@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
-using Entity.Models;
+using Entity.Models.Offers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebAPI.Model.DataTransferObject.Offers;
+using WebAPI.Model.DataTransferObject;
 
 namespace WebAPI.Model.Mapping
 {

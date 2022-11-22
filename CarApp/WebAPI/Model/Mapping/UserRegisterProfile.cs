@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Entity;
+using Entity.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;

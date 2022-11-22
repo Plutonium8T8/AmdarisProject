@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace Entity.Repository.Interfaces
 {
     public interface IRepository<T> : IDisposable
     {

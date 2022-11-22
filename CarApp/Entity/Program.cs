@@ -1,2 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace Entity
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            using (var db = AppContextFactory.CreateAppContext("DefaultConnection"))
+            {
+                if (db.Database.CanConnect())
+                {
+                    Console.WriteLine("Connection with Database - success!");
+                }
+            }
+
+            Console.Read();
+        }
+    }
+}

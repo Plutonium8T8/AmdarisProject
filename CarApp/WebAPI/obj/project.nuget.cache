@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "n7BIAC18AzXX+XZ8j3nd3nLYqWh8CaSCj5sPc9H5+3WTlhyNU3GBbXJPFS5bVz8t7RQQ0A81Jw6IRUUVjGvrLg==",
-  "success": false,
+  "dgSpecHash": "Nhr/IbSB8nNK8/kuGJ1bzHRnCCKfn1V8Bnffr2QDXYfsrrjic1qzTbhHT+/gU7cuJPg5moIUT6n33YMmWqI6eg==",
+  "success": true,
   "projectFilePath": "D:\\CarApp\\AmdarisProject\\CarApp\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cristian\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
@@ -32,14 +32,14 @@
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.0.0\\microsoft.extensions.configuration.binder.2.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\6.0.0\\microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.configuration.json\\6.0.0\\microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\6.0.0\\microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\6.0.0\\microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\6.0.0\\microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.9\\microsoft.extensions.identity.core.6.0.9.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.9\\microsoft.extensions.identity.stores.6.0.9.nupkg.sha512",
-    "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
@@ -121,51 +121,5 @@
     "C:\\Users\\Cristian\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\CarApp\\AmdarisProject\\CarApp\\Common\\Common.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\CarApp\\AmdarisProject\\CarApp\\Common\\Common.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1104",
-      "level": "Error",
-      "message": "Unable to find project 'D:\\CarApp\\AmdarisProject\\CarApp\\KeyVaultRead\\KeyVaultRead.csproj'. Check that the project reference is valid and that the project file exists.",
-      "libraryId": "D:\\CarApp\\AmdarisProject\\CarApp\\KeyVaultRead\\KeyVaultRead.csproj",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.Extensions.DependencyInjection from 6.0.0 to 5.0.1. Reference the package directly from the project to select a different version. \r\n WebAPI -> Entity -> Microsoft.EntityFrameworkCore 6.0.9 -> Microsoft.Extensions.DependencyInjection (>= 6.0.0) \r\n WebAPI -> Microsoft.Extensions.DependencyInjection (>= 5.0.1)",
-      "libraryId": "Microsoft.Extensions.DependencyInjection",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.Extensions.Logging from 6.0.0 to 5.0.0. Reference the package directly from the project to select a different version. \r\n WebAPI -> Entity -> Microsoft.EntityFrameworkCore 6.0.9 -> Microsoft.Extensions.Logging (>= 6.0.0) \r\n WebAPI -> Microsoft.Extensions.Logging (>= 5.0.0)",
-      "libraryId": "Microsoft.Extensions.Logging",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Detected package downgrade: Microsoft.Extensions.Logging from 6.0.0 to 5.0.0. Reference the package directly from the project to select a different version. \r\n WebAPI -> Entity -> Microsoft.AspNetCore.Identity.EntityFrameworkCore 6.0.9 -> Microsoft.Extensions.Identity.Stores 6.0.9 -> Microsoft.Extensions.Logging (>= 6.0.0) \r\n WebAPI -> Microsoft.Extensions.Logging (>= 5.0.0)",
-      "libraryId": "Microsoft.Extensions.Logging",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

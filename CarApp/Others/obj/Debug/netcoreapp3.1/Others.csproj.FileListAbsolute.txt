@@ -1,0 +1,10 @@
+D:\CarApp\AmdarisProject\CarApp\Others\bin\Debug\netcoreapp3.1\Others.deps.json
+D:\CarApp\AmdarisProject\CarApp\Others\bin\Debug\netcoreapp3.1\Others.dll
+D:\CarApp\AmdarisProject\CarApp\Others\bin\Debug\netcoreapp3.1\Others.pdb
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.csproj.AssemblyReference.cache
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.GeneratedMSBuildEditorConfig.editorconfig
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.AssemblyInfoInputs.cache
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.AssemblyInfo.cs
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.csproj.CoreCompileInputs.cache
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.dll
+D:\CarApp\AmdarisProject\CarApp\Others\obj\Debug\netcoreapp3.1\Others.pdb

@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Others.Exceptions;
-using Entity;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -9,6 +8,8 @@ using System.Threading.Tasks;
 using WebAPI.Model.DataTransferObject.Offer;
 using WebAPI.Model.DataTransferObject.User;
 using WebAPI.Services.Interfaces;
+using Entity.Repository.Interfaces;
+using Entity.Models.Users;
 
 namespace WebAPI.Services
 {

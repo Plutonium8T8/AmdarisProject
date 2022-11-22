@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Entity.Models;
+using Entity.Models.Offers;
+using Entity.Models.Users;
+using Entity.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
-namespace Entity
+namespace Entity.Repository
 {
     public class UserRepository : GenericRepository<User>, IUserRepository
     {
@@ -37,14 +39,14 @@ namespace Entity
 
         public async Task<User> SingleUserAndEmail(string username, string email)
         {
-            var res = await _context.Set<User>().FirstOrDefaultAsync(u => u.Email == email || (u.UserName == username));
+            var res = await _context.Set<User>().FirstOrDefaultAsync(u => u.Email == email || u.UserName == username);
             if (res == null) throw UserNotFound;
             return res;
         }
 
         public async Task<User> CreateUser(User user)
         {
-            await base.Create(user);
+            await Create(user);
 
             return user;
         }

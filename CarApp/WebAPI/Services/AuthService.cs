@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Others.Exceptions;
-using Entity;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -12,10 +11,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using WebAPI.Model.AuthOptions;
 using WebAPI.Model.DataTransferObject;
 using WebAPI.Model.DataTransferObject.User;
 using WebAPI.Services.Interfaces;
+using Entity.Repository.Interfaces;
+using Entity.Models.Users;
+using WebAPI.Model.Helpers;
 
 namespace WebAPI.Services
 {

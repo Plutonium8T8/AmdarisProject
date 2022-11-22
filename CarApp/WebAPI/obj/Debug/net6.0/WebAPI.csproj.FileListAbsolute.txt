@@ -1,0 +1,6 @@
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.csproj.AssemblyReference.cache
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfoInputs.cache
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfo.cs
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.csproj.CoreCompileInputs.cache
+D:\CarApp\AmdarisProject\CarApp\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.cache

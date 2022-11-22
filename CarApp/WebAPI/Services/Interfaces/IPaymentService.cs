@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace WebAPI.Services
+namespace WebAPI.Services.Interfaces
 {
     public interface IPaymentService
     {

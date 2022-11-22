@@ -8,8 +8,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Entity.Models.Users;
 
-namespace Entity
+namespace Entity.Configurations
 {
     public class UserConfiguration : IEntityTypeConfiguration<User>
     {

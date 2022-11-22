@@ -3,10 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Entity;
 using Microsoft.AspNetCore.Identity;
 using Entity.Models;
-using WebAPI.Model.AuthOptions;
 using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 using System.Reflection;
@@ -20,6 +18,9 @@ using System.Threading.Tasks;
 using KeyVR;
 using Stripe;
 using Microsoft.AspNetCore.Authentication.OAuth;
+using Entity.Repository;
+using Entity.Repository.Interfaces;
+using WebAPI.Model.Helpers;
 
 namespace WebAPI
 {
@@ -34,7 +35,7 @@ namespace WebAPI
 
         public void ConfigureServices (IServiceCollection services)
         {
-            services.AddDbContext<Entity.AppContext>(options =>
+            services.AddDbContext<Entity.AppContext.AppContext>(options =>
                 options.UseSqlServer(GetSecrets.ConnectionString), ServiceLifetime.Transient);
 
             services.AddScoped<IOfferRepository, OfferRepository>();

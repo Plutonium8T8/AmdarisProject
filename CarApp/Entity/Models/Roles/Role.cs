@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace Entity.Models
+namespace Entity.Models.Roles
 {
     public class Role : IdentityRole<long>
     {
