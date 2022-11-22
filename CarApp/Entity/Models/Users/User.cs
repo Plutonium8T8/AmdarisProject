@@ -15,11 +15,11 @@ namespace Entity
     {
         [MaxLength(32)]
         [Required]
-        public string FirstName { get; set; }
+        public string UserName { get; set; }
 
-        [MaxLength(32)]
+/*        [MaxLength(32)]
         [Required]
-        public string LastName { get; set; }
+        public string LastName { get; set; }*/
 
         [MaxLength(32)]
         [EmailAddress]
@@ -29,6 +29,6 @@ namespace Entity
         public DateTime DOB { get; set; }
         public string RegisterTimestamp { get; set; }
 
-        public virtual ICollection<Offer> Oferrs { get; set; }
+        public virtual ICollection<Offer> Offers { get; set; }
     }
 }

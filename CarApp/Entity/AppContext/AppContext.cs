@@ -13,7 +13,6 @@ namespace Entity
     {
         public DbSet<Offer> Offers { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
-
         public DbSet<CSVFile> CSVFiles { get; set; }
 
         public AppContext(DbContextOptions<AppContext> options) : base(options)

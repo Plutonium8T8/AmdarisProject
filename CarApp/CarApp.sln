@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarApp", "CarApp\CarApp.csproj", "{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarApp", "CarApp\CarApp.csproj", "{5355D350-0D14-4EC1-8EA6-72FE8F2D1E1C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{F93E2A60-EB0D-41BB-BEC7-AEF11B1EFB36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyVR", "KeyVR\KeyVR.csproj", "{17CC9FE2-8E10-4290-8B2B-4F5DB92E298C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Others", "Others\Others.csproj", "{A2206F5F-0822-481E-B21C-D896F871E4D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3ECE071-78CE-4A70-A5CE-53C2EE30B715}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93E2A60-EB0D-41BB-BEC7-AEF11B1EFB36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93E2A60-EB0D-41BB-BEC7-AEF11B1EFB36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93E2A60-EB0D-41BB-BEC7-AEF11B1EFB36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93E2A60-EB0D-41BB-BEC7-AEF11B1EFB36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CC9FE2-8E10-4290-8B2B-4F5DB92E298C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CC9FE2-8E10-4290-8B2B-4F5DB92E298C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CC9FE2-8E10-4290-8B2B-4F5DB92E298C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CC9FE2-8E10-4290-8B2B-4F5DB92E298C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2206F5F-0822-481E-B21C-D896F871E4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2206F5F-0822-481E-B21C-D896F871E4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2206F5F-0822-481E-B21C-D896F871E4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2206F5F-0822-481E-B21C-D896F871E4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

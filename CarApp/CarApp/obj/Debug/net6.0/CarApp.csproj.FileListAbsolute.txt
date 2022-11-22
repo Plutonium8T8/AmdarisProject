@@ -1,0 +1,15 @@
+D:\CarApp\AmdarisProject\CarApp\CarApp\bin\Debug\net6.0\CarApp.exe
+D:\CarApp\AmdarisProject\CarApp\CarApp\bin\Debug\net6.0\CarApp.deps.json
+D:\CarApp\AmdarisProject\CarApp\CarApp\bin\Debug\net6.0\CarApp.runtimeconfig.json
+D:\CarApp\AmdarisProject\CarApp\CarApp\bin\Debug\net6.0\CarApp.dll
+D:\CarApp\AmdarisProject\CarApp\CarApp\bin\Debug\net6.0\CarApp.pdb
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.csproj.AssemblyReference.cache
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.AssemblyInfoInputs.cache
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.AssemblyInfo.cs
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.csproj.CoreCompileInputs.cache
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.dll
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\refint\CarApp.dll
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.pdb
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\CarApp.genruntimeconfig.cache
+D:\CarApp\AmdarisProject\CarApp\CarApp\obj\Debug\net6.0\ref\CarApp.dll
