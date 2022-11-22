@@ -7,6 +7,6 @@ namespace Entity.Models
     {
         [MaxLength(32)]
         // Moderator, User, Customer, Guest
-        public string?? RoleName { get; set; };
+        public string? RoleName { get; set; }
     }
 }

@@ -9,6 +9,9 @@ namespace Entity
 {
     public interface IOfferRepository : IRepository<Offer>
     {
-        Task CreateOffer(Offer offer);
+        Task<Offer> CreateOffer(Offer offer);
+        Task<Offer> GetOfferById(long id);
+        Task<Offer> DeleteOffer(long id);
+        Task<Offer> UpdateOffer(Offer offer);
     }
 }

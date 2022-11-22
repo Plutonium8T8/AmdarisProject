@@ -1,0 +1,5 @@
+D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.csproj.AssemblyReference.cache
+D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.AssemblyInfoInputs.cache
+D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.AssemblyInfo.cs
+D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.csproj.CoreCompileInputs.cache

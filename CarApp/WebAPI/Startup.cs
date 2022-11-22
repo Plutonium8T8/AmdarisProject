@@ -54,6 +54,10 @@ namespace WebAPI
                 };
             });
 
+            var authOptionsConfiguration = Configuration.GetSection("Auth");
+            services.Configure<AuthOptions>(authOptionsConfiguration);
+            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
