@@ -52,8 +52,9 @@ namespace WebAPI
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddCors();
+            services.AddSwaggerGen();
 
-            services.AddIdentity<User, Role>(options =>
+            /*services.AddIdentity<User, Role>(options =>
             {
                 options.Password.RequiredLength = 8;
                 options.Password.RequireUppercase = false;
@@ -68,9 +69,9 @@ namespace WebAPI
             .AddRoleManager<RoleManager<Role>>()
             .AddEntityFrameworkStores<Entity.AppContext>();
 
-            var authOptionsConfiguration = Configuration.GetSection("Auth");
+*//*            var authOptionsConfiguration = Configuration.GetSection("Auth");
             services.Configure<AuthOptions>(authOptionsConfiguration);
-            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();*//*
 
             services.ConfigureApplicationCookie(options =>
             {
@@ -84,9 +85,9 @@ namespace WebAPI
                     context.Response.Redirect(context.RedirectUri);
                     return Task.FromResult<object>(null);
                 };
-            });
+            });*/
 
-            services.AddAuthentication(options =>
+            /*services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -106,22 +107,23 @@ namespace WebAPI
                      ValidateIssuerSigningKey = true,
                      IssuerSigningKey = authOptions.GetSymmetricSecurityKey()
                  };
-             });
+             });*/
 
-            services.AddAuthentication();
+            /*services.AddAuthentication();*/
 
             services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            StripeConfiguration.ApiKey = GetSecrets.StripeSecretKey;
+            /*            StripeConfiguration.ApiKey = GetSecrets.StripeSecretKey;
 
-            System.Console.WriteLine(StripeConfiguration.ApiKey);
+                        System.Console.WriteLine(StripeConfiguration.ApiKey);
 
-            loggerFactory.AddFile("Logs/App-{Date}.txt");
+                        loggerFactory.AddFile("Logs/App-{Date}.txt");*/
 
             app.UseSwagger();
+            app.UseSwaggerUI();
 
             if (env.IsDevelopment())
             {
@@ -141,8 +143,8 @@ namespace WebAPI
 
             app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+            /*app.UseAuthentication();
+            app.UseAuthorization();*/
 
             app.UseEndpoints(endpoints =>
             {

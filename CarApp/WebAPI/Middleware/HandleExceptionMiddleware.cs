@@ -26,21 +26,25 @@ namespace WebAPI.Middleware
             }
             catch (EntityAlreadyExistException uaex)
             {
+                Console.WriteLine(1);
                 _logger.LogError(uaex, "EntityAlreadyExistException occured");
                 await ReturnErrorAsync(context, uaex.PublicMessage, uaex.ReturnStatusCode);
             }
             catch (EntityNotFoundException enfx)
             {
+                Console.WriteLine(2);
                 _logger.LogError(enfx, "EntityNotFoundException occured");
                 await ReturnErrorAsync(context, enfx.PublicMessage, enfx.ReturnStatusCode);
             }
             catch (InvalidFormException ifex)
             {
+                Console.WriteLine(3);
                 _logger.LogError(ifex, "InvalidFormException occured");
                 await ReturnErrorAsync(context, ifex.PublicMessage, ifex.ReturnStatusCode);
             }
             catch (Exception ex)
             {
+                Console.WriteLine(4);
                 _logger.LogError(ex, "Exception occured");
                 await ReturnErrorAsync(context, "Internal Server Errror");
             }
