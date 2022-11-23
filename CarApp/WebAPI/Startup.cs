@@ -26,16 +26,16 @@ namespace WebAPI
 {
     public class Startup
     {
-        public Startup (IConfiguration configuration)
-        {
-            configuration = configuration;
-        }
-
         public IConfiguration Configuration { get; }
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
         public void ConfigureServices (IServiceCollection services)
         {
-            services.AddDbContext<Entity.AppContext.AppContext>(options =>
+            services.AddDbContext<Entity.AppContext>(options =>
                 options.UseSqlServer(GetSecrets.ConnectionString), ServiceLifetime.Transient);
 
             services.AddScoped<IOfferRepository, OfferRepository>();

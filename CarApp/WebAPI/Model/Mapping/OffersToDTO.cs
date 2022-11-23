@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebAPI.Model.DataTransferObject;
+using WebAPI.Model.DataTransferObject.Offer;
 
 namespace WebAPI.Model.Mapping
 {

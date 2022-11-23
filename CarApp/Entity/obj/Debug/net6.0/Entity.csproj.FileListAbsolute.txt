@@ -68,3 +68,16 @@ D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\refint\Entity.dll
 D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.pdb
 D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\Entity.genruntimeconfig.cache
 D:\CarApp\AmdarisProject\CarApp\Entity\obj\Debug\net6.0\ref\Entity.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Azure.Core.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Azure.Identity.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\Mono.TextTemplating.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\System.CodeDom.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\System.Memory.Data.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\System.Text.Json.dll
+D:\CarApp\AmdarisProject\CarApp\Entity\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

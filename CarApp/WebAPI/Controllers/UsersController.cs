@@ -35,9 +35,9 @@ namespace WebAPI.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateUser([FromBody] UserUpdateDTO userUpdate)
         {
-            var result = await _userService.UpdateUser(userUpdate);
+            await _userService.UpdateUser(userUpdate);
 
-            return Ok(result);
+            return Ok();
         }
 
         [HttpGet("{id}/offers")]

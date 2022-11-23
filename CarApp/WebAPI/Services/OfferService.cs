@@ -25,7 +25,7 @@ namespace WebAPI.Services
         {
             var offer = _mapper.Map<Offer>(offerCreate);
 
-            var result = await _offersRepository.CreateOffer(offer);
+            await _offersRepository.CreateOffer(offer);
         }
 
         public async Task DeleteOffer(long id)

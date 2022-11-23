@@ -17,9 +17,9 @@ namespace Entity.Models
     public class Subscription : EntityBaseClass
     {
         public long UserId { get; set; }
-        public virtual User Customer { get; set; }
+/*        public virtual User Customer { get; set; }
         public long OfferId { get; set; }
-        public virtual Offer Offer { get; set; }
+        public virtual Offer Offer { get; set; }*/
 
         [Required]
         public DateTime SubscriptionStartTimestamp { get; set; }

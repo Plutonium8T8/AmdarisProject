@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> Create(PaymentDTO token)
         {
-            await _peymentService.CreateCharge(token.Token, 3000);
+            await _peymentService.CreateCharge(token.Token, 1, "usd", "description");
             return Ok();
         }
     }

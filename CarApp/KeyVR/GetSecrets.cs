@@ -13,18 +13,18 @@ namespace KeyVR
         public static string StripeSecretKey { get; private set; }
         static GetSecrets()
         {
-            var BASE_URI = "https://mdashboard-keys.vault.azure.net/";
-            var CLIENT_SECRET = ".3z9-wVpu1_.~GdKR-pqLa-NjJs63ME8qU";
-            var CLIENT_ID = "be9a06d7-05cd-462d-9eae-f76b281f6dea";
-            var TENANT_ID = "c7d03ef3-8f8f-4e37-89ab-dadca007cee0";
+            var BASE_URI = "https://carappkeyvault.vault.azure.net/";
+            var CLIENT_SECRET = "ZPk8Q~eOfG1.GF0h2ITkj2P~rhKg09boWPeK5as1";
+            var CLIENT_ID = "e601fc5e-c557-4765-8697-1513bf2425b8";
+            var TENANT_ID = "544f8ac3-ce4c-47d1-9b72-284ac54b8d1c";
 
             var client = new SecretClient(new Uri(BASE_URI), new ClientSecretCredential(tenantId: TENANT_ID, clientId: CLIENT_ID, clientSecret: CLIENT_SECRET));
 
             var authKey = client.GetSecret("AuthKey");
 
-            var connectionString = client.GetSecret("DefaultConnectionString");
+            var connectionString = client.GetSecret("ConnectionString");
 
-            var StripeKey = client.GetSecret("StripeApiKey");
+            var StripeKey = client.GetSecret("StripeApi");
 
             AuthKey = authKey.Value.Value;
             ConnectionString = connectionString.Value.Value;
