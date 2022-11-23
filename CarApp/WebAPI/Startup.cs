@@ -21,6 +21,9 @@ using Microsoft.AspNetCore.Authentication.OAuth;
 using Entity.Repository;
 using Entity.Repository.Interfaces;
 using WebAPI.Model.Helpers;
+using Entity.Models.Payment;
+using Entity.Models.Roles;
+using Entity.Models.Users;
 
 namespace WebAPI
 {
@@ -40,6 +43,17 @@ namespace WebAPI
 
             services.AddScoped<IOfferRepository, OfferRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IRepository<Payment>, GenericRepository<Payment>>();
+            services.AddScoped<IRepository<PaymentDetails>, GenericRepository<PaymentDetails>>();
+            services.AddScoped<IRepository<Entity.Models.Subscription>, GenericRepository<Entity.Models.Subscription>>();
+
+            services.AddScoped<IOffersService, OfferService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IPaymentService, PaymentService>();
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+            services.AddCors();
 
             services.ConfigureApplicationCookie(options =>
             {
@@ -58,6 +72,21 @@ namespace WebAPI
             var authOptionsConfiguration = Configuration.GetSection("Auth");
             services.Configure<AuthOptions>(authOptionsConfiguration);
             var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+
+            services.AddIdentity<User, Role>(options =>
+            {
+                options.Password.RequiredLength = 8;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequiredUniqueChars = 0;
+                options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-. ";
+                options.User.RequireUniqueEmail = true;
+            })
+            .AddRoles<Role>()
+            .AddRoleManager<RoleManager<Role>>()
+            .AddEntityFrameworkStores<Entity.AppContext>();
 
             services.AddAuthentication(options =>
             {

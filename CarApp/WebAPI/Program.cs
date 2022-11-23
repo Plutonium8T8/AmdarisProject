@@ -22,6 +22,8 @@ namespace WebAPI
                 }).UseStartup<Startup>().
                 Build();
 
+            Console.WriteLine("Server starting...");
+
             host.Run();
         }
 

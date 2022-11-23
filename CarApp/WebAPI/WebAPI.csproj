@@ -23,9 +23,4 @@
 		<ProjectReference Include="..\Entity\Entity.csproj" />
 		<ProjectReference Include="..\KeyVR\KeyVR.csproj" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Logs\" />
-	</ItemGroup>
-
 </Project>
