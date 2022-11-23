@@ -119,7 +119,7 @@ namespace WebAPI
 
             System.Console.WriteLine(StripeConfiguration.ApiKey);
 
-            loggerFactory.AddFile("log.txt");
+            loggerFactory.AddFile("Logs/App-{Date}.txt");
 
             app.UseSwagger();
 
