@@ -15,6 +15,7 @@ namespace WebAPI.Model.Helpers
         public int TokenLifeTime { get; set; }
         public SymmetricSecurityKey GetSymmetricSecurityKey()
         {
+            Console.WriteLine(Encoding.ASCII.GetBytes(Secret));
             return new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Secret));
         }
     }

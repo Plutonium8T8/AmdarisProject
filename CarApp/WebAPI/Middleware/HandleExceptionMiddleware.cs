@@ -32,7 +32,6 @@ namespace WebAPI.Middleware
             catch (EntityNotFoundException enfx)
             {
                 _logger.LogError(enfx, "EntityNotFoundException occured");
-                //return  new JsonResult(enfx.PublicMessage);
                 await ReturnErrorAsync(context, enfx.PublicMessage, enfx.ReturnStatusCode);
             }
             catch (InvalidFormException ifex)
@@ -43,7 +42,6 @@ namespace WebAPI.Middleware
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Exception occured");
-                ///return new Microsoft.AspNetCore.Mvc.JsonResult(result);
                 await ReturnErrorAsync(context, "Internal Server Errror");
             }
 

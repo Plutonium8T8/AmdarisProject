@@ -3,27 +3,25 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Entity.Models.Roles;
+using Entity.Models.Users;
 using Microsoft.AspNetCore.Identity;
-using Entity.Models;
+using Entity.Models.Payment;
+using WebAPI.Model.Helpers;
 using WebAPI.Services;
 using WebAPI.Services.Interfaces;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Entity.Repository;
 using WebAPI.Middleware;
 using Microsoft.Extensions.Logging;
+using Entity.Repository.Interfaces;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 using KeyVR;
 using Stripe;
-using Microsoft.AspNetCore.Authentication.OAuth;
-using Entity.Repository;
-using Entity.Repository.Interfaces;
-using WebAPI.Model.Helpers;
-using Entity.Models.Payment;
-using Entity.Models.Roles;
-using Entity.Models.Users;
 
 namespace WebAPI
 {
@@ -55,24 +53,6 @@ namespace WebAPI
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddCors();
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.Events.OnRedirectToAccessDenied = options.Events.OnRedirectToLogin = context =>
-                {
-                    if (context.Request.Method != "GET")
-                    {
-                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                        return Task.FromResult<object>(null);
-                    }
-                    context.Response.Redirect(context.RedirectUri);
-                    return Task.FromResult<object>(null);
-                };
-            });
-
-            var authOptionsConfiguration = Configuration.GetSection("Auth");
-            services.Configure<AuthOptions>(authOptionsConfiguration);
-            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
-
             services.AddIdentity<User, Role>(options =>
             {
                 options.Password.RequiredLength = 8;
@@ -88,26 +68,45 @@ namespace WebAPI
             .AddRoleManager<RoleManager<Role>>()
             .AddEntityFrameworkStores<Entity.AppContext>();
 
+            var authOptionsConfiguration = Configuration.GetSection("Auth");
+            services.Configure<AuthOptions>(authOptionsConfiguration);
+            var authOptions = Configuration.GetSection("Auth").Get<AuthOptions>();
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToAccessDenied = options.Events.OnRedirectToLogin = context =>
+                {
+                    if (context.Request.Method != "GET")
+                    {
+                        context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                        return Task.FromResult<object>(null);
+                    }
+                    context.Response.Redirect(context.RedirectUri);
+                    return Task.FromResult<object>(null);
+                };
+            });
+
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidIssuer = authOptions.Issuer,
+            })
+             .AddJwtBearer(options =>
+             {
+                 options.TokenValidationParameters = new TokenValidationParameters
+                 {
+                     ValidateIssuer = true,
+                     ValidIssuer = authOptions.Issuer,
 
-                    ValidateAudience = true,
-                    ValidAudience = authOptions.Audience,
+                     ValidateAudience = true,
+                     ValidAudience = authOptions.Audience,
 
-                    ValidateLifetime = true,
+                     ValidateLifetime = true,
 
-                    ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = authOptions.GetSymmetricSecurityKey()
-                };
-            });
+                     ValidateIssuerSigningKey = true,
+                     IssuerSigningKey = authOptions.GetSymmetricSecurityKey()
+                 };
+             });
 
             services.AddAuthentication();
 
@@ -120,7 +119,9 @@ namespace WebAPI
 
             System.Console.WriteLine(StripeConfiguration.ApiKey);
 
-            loggerFactory.AddFile("Logs/App-{Date}.txt");
+            loggerFactory.AddFile("log.txt");
+
+            app.UseSwagger();
 
             if (env.IsDevelopment())
             {
