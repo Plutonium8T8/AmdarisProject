@@ -15,7 +15,7 @@ namespace Entity.Models.Users
     {
         [MaxLength(32)]
         [Required]
-        public string UserName { get; set; }
+        public string Username { get; set; }
 
         /*        [MaxLength(32)]
                 [Required]

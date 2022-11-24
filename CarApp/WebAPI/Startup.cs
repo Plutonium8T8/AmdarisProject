@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Entity.Models.Roles;
 using Entity.Models.Users;
+using Entity;
 using Microsoft.AspNetCore.Identity;
 using Entity.Models.Payment;
 using WebAPI.Model.Helpers;
@@ -122,9 +123,6 @@ namespace WebAPI
             System.Console.WriteLine(StripeConfiguration.ApiKey);
 
             loggerFactory.AddFile("Logs/App-{Date}.txt");
-
-            app.UseSwagger();
-            app.UseSwaggerUI();
 
             if (env.IsDevelopment())
             {

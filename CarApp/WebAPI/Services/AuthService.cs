@@ -17,6 +17,7 @@ using WebAPI.Services.Interfaces;
 using Entity.Repository.Interfaces;
 using Entity.Models.Users;
 using WebAPI.Model.Helpers;
+using System.Text.RegularExpressions;
 
 namespace WebAPI.Services
 {
@@ -80,16 +81,16 @@ namespace WebAPI.Services
 
         public async Task<LoginUserResponseDTO> Login(LoginUserDTO loginUserDTO)
         {
-            var checkUsername = _userRepository.GetUserByName(loginUserDTO.UserName);
+            var checkUsername = _userRepository.GetUserByName(loginUserDTO.Username);
 
-            var checkPassword = await _signInManager.PasswordSignInAsync(loginUserDTO.UserName, loginUserDTO.Password, false, false);
+            var checkPassword = await _signInManager.PasswordSignInAsync(loginUserDTO.Username, loginUserDTO.Password, false, false);
 
             if (!checkPassword.Succeeded || checkUsername == null)
             {
                 throw new InvalidFormException($"", "wrong username or password", StatusCodes.Status401Unauthorized);
             }
 
-            var user = await _userRepository.GetUserByName(loginUserDTO.UserName);
+            var user = await _userRepository.GetUserByName(loginUserDTO.Username);
 
             var token = await GenerateToken(user);
 
@@ -103,19 +104,21 @@ namespace WebAPI.Services
 
         public async Task<UserResponseDTO> RegisterUser(RegisterUserDTO registerUser)
         {
-            var check = await _userRepository.SingleUserAndEmail(username: registerUser.UserName, email: registerUser.Email);
+            var check = await _userRepository.SingleUserAndEmail(username: registerUser.Username, email: registerUser.Email);
 
             if (check != null)
             {
                 var email = registerUser.Email == check.Email ? "Email - " : "";
-                var username = registerUser.UserName == check.UserName ? "Username :" : "";
+                var username = registerUser.Username == check.Username ? "Username :" : "";
 
                 throw new EntityAlreadyExistException("", $" {email} {username} already taken!");
             }
 
             var user = _mapper.Map<User>(registerUser);
 
-            Console.WriteLine(user.UserName);
+            Console.WriteLine(user.Username);
+
+            Console.WriteLine(Regex.IsMatch(user.Username, @"^[A-Za-z0-9@_\.]+$"));
 
             var result = await RegisterNewUser(user, registerUser.Password);
 

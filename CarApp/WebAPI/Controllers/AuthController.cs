@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 using WebAPI.Model.DataTransferObject.User;
 using WebAPI.Services.Interfaces;
 
@@ -21,9 +22,10 @@ namespace WebAPI.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Create([FromBody] RegisterUserDTO registerUser)
         {
-            Console.WriteLine(registerUser.UserName);
+            Console.WriteLine(registerUser.Username);
             Console.WriteLine(registerUser.Password);
             Console.WriteLine(registerUser.Email);
+            Console.WriteLine("CurrentCulture is {0}.", CultureInfo.CurrentCulture.Name);
             var result = await _authService.RegisterUser(registerUser);
             return Ok(result);
         }

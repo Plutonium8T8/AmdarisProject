@@ -69,7 +69,7 @@ namespace WebAPI.Services
 
             checkExistance(result);
 
-            result.UserName = userUpdate.UserName;
+            result.UserName = userUpdate.Username;
 
             await _userRepository.Update(result);
         }
