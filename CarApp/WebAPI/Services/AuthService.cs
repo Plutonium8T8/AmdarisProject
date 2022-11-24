@@ -66,8 +66,6 @@ namespace WebAPI.Services
         {
             Console.WriteLine(user.UserName);
 
-            user.UserName = "testusername";
-
             var result = await _userManager.CreateAsync(user, password);
 
             Console.WriteLine(result.Succeeded);
@@ -116,6 +114,8 @@ namespace WebAPI.Services
             }
 
             var user = _mapper.Map<User>(registerUser);
+
+            Console.WriteLine(user.UserName);
 
             var result = await RegisterNewUser(user, registerUser.Password);
 

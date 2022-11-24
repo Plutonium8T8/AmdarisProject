@@ -30,11 +30,11 @@ namespace WebAPI.Middleware
                 _logger.LogError(uaex, "EntityAlreadyExistException occured");
                 await ReturnErrorAsync(context, uaex.PublicMessage, uaex.ReturnStatusCode);
             }
-            catch (EntityNotFoundException enfx)
+            catch (EntityNotFoundException enfex)
             {
                 Console.WriteLine(2);
-                _logger.LogError(enfx, "EntityNotFoundException occured");
-                await ReturnErrorAsync(context, enfx.PublicMessage, enfx.ReturnStatusCode);
+                _logger.LogError(enfex, "EntityNotFoundException occured");
+                await ReturnErrorAsync(context, enfex.PublicMessage, enfex.ReturnStatusCode);
             }
             catch (InvalidFormException ifex)
             {

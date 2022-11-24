@@ -22,6 +22,8 @@ namespace WebAPI.Controllers
         public async Task<IActionResult> Create([FromBody] RegisterUserDTO registerUser)
         {
             Console.WriteLine(registerUser.UserName);
+            Console.WriteLine(registerUser.Password);
+            Console.WriteLine(registerUser.Email);
             var result = await _authService.RegisterUser(registerUser);
             return Ok(result);
         }
