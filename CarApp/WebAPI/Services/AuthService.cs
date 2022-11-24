@@ -64,7 +64,13 @@ namespace WebAPI.Services
 
         private async Task<IdentityResult> RegisterNewUser(User user, string password)
         {
+            Console.WriteLine(user.UserName);
+
+            user.UserName = "testusername";
+
             var result = await _userManager.CreateAsync(user, password);
+
+            Console.WriteLine(result.Succeeded);
 
             if (result.Succeeded)
             {

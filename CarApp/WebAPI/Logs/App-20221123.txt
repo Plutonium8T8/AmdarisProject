@@ -1,0 +1,119 @@
+2022-11-23T12:25:18.6211283-08:00 0HMMDI3ACT93L:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T12:28:02.4926554-08:00 0HMMDI4RBR7N7:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T12:30:40.7348954-08:00 0HMMDI6AN7G2I:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T13:35:45.6237789-08:00 0HMMDJALTPIDH:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T14:42:35.0974639-08:00 0HMMDJALTPIDJ:00000003 [ERR] Exception occured (6d4ec5f5)
+System.Exception: Entity not found. User does not exist.
+   at Entity.Repository.UserRepository.SingleUserAndEmail(String username, String email) in D:\CarApp\AmdarisProject\CarApp\Entity\Repository\UserRepository.cs:line 43
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 102
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T14:43:33.4078668-08:00 0HMMDKGISCDKE:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T14:47:32.3845795-08:00 0HMMDKGISCDKG:00000002 [ERR] Exception occured (6d4ec5f5)
+System.Exception: Entity not found. User does not exist.
+   at Entity.Repository.UserRepository.SingleUserAndEmail(String username, String email) in D:\CarApp\AmdarisProject\CarApp\Entity\Repository\UserRepository.cs:line 43
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 102
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T14:51:10.9462135-08:00 0HMMDKGISCDKG:00000003 [ERR] Exception occured (6d4ec5f5)
+System.Exception: Entity not found. User does not exist.
+   at Entity.Repository.UserRepository.SingleUserAndEmail(String username, String email) in D:\CarApp\AmdarisProject\CarApp\Entity\Repository\UserRepository.cs:line 43
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 102
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T14:54:15.4239844-08:00 0HMMDKMB6RDUB:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T14:54:41.1030471-08:00 0HMMDKMB6RDUD:00000002 [WRN] User validation failed: "InvalidUserName". (70e51dd0)
+2022-11-23T14:54:58.4649992-08:00 0HMMDKMB6RDUD:00000002 [ERR] InvalidFormException occured (dd6bf416)
+Others.Exceptions.InvalidFormException
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 118
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T15:03:50.7010106-08:00 0HMMDKRTJ66KL:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T15:06:24.7054026-08:00 0HMMDKRTJ66KM:00000002 [WRN] User validation failed: "InvalidUserName". (70e51dd0)
+2022-11-23T15:08:57.1490027-08:00 0HMMDKRTJ66KM:00000002 [ERR] InvalidFormException occured (dd6bf416)
+Others.Exceptions.InvalidFormException
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 118
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T15:15:32.9114664-08:00 0HMMDL2EV7DRB:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T15:16:51.2585818-08:00 0HMMDL2EV7DRD:00000002 [WRN] User validation failed: "InvalidUserName". (70e51dd0)
+2022-11-23T15:18:08.6119643-08:00 0HMMDL2EV7DRD:00000002 [ERR] InvalidFormException occured (dd6bf416)
+Others.Exceptions.InvalidFormException
+   at WebAPI.Services.AuthService.RegisterUser(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Services\AuthService.cs:line 122
+   at WebAPI.Controllers.AuthController.Create(RegisterUserDTO registerUser) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Controllers\AuthController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at WebAPI.Middleware.HandleExceptionMiddleware.InvokeAsync(HttpContext context) in D:\CarApp\AmdarisProject\CarApp\WebAPI\Middleware\HandleExceptionMiddleware.cs:line 25
+2022-11-23T15:19:05.7273730-08:00 0HMMDL2EV7DRD:00000003 [WRN] User validation failed: "InvalidUserName". (70e51dd0)
+2022-11-23T15:23:46.2518468-08:00 0HMMDL70U0L2Q:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-23T15:25:52.5125186-08:00 0HMMDL70U0L2S:00000002 [WRN] User validation failed: "InvalidUserName". (70e51dd0)

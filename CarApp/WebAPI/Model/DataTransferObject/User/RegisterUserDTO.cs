@@ -11,8 +11,6 @@ namespace WebAPI.Model.DataTransferObject.User
     {
         [Required]
         [MaxLength(32)]
-        public string FullName { get; set; }
-        [Required]
         public string UserName { get; set; }
         [Required]
         public string Password { get; set; }

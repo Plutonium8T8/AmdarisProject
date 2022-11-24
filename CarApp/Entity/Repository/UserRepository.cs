@@ -40,7 +40,7 @@ namespace Entity.Repository
         public async Task<User> SingleUserAndEmail(string username, string email)
         {
             var res = await _context.Set<User>().FirstOrDefaultAsync(u => u.Email == email || u.UserName == username);
-            if (res == null) throw UserNotFound;
+
             return res;
         }
 
@@ -54,6 +54,7 @@ namespace Entity.Repository
         public async Task<ICollection<Offer>> GetOffers(long id)
         {
             var res = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+
             return res?.Offers;
         }
     }
