@@ -37,6 +37,7 @@ namespace WebAPI
 
         public void ConfigureServices (IServiceCollection services)
         {
+            Console.WriteLine(GetSecrets.ConnectionString);
             services.AddDbContext<Entity.AppContext>(options =>
                 options.UseSqlServer(GetSecrets.ConnectionString), ServiceLifetime.Transient);
 

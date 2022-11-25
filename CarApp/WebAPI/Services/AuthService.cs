@@ -65,11 +65,9 @@ namespace WebAPI.Services
 
         private async Task<IdentityResult> RegisterNewUser(User user, string password)
         {
-            Console.WriteLine(user.UserName);
+            user.DOB = DateTime.Now;
 
             var result = await _userManager.CreateAsync(user, password);
-
-            Console.WriteLine(result.Succeeded);
 
             if (result.Succeeded)
             {
@@ -109,16 +107,16 @@ namespace WebAPI.Services
             if (check != null)
             {
                 var email = registerUser.Email == check.Email ? "Email - " : "";
-                var username = registerUser.Username == check.Username ? "Username :" : "";
+                var username = registerUser.Username == check.UserName ? "Username :" : "";
 
                 throw new EntityAlreadyExistException("", $" {email} {username} already taken!");
             }
 
             var user = _mapper.Map<User>(registerUser);
 
-            Console.WriteLine(user.Username);
+            Console.WriteLine(user.UserName);
 
-            Console.WriteLine(Regex.IsMatch(user.Username, @"^[A-Za-z0-9@_\.]+$"));
+            Console.WriteLine(Regex.IsMatch(user.UserName, @"^[A-Za-z0-9@_\.]+$"));
 
             var result = await RegisterNewUser(user, registerUser.Password);
 

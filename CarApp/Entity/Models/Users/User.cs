@@ -15,7 +15,7 @@ namespace Entity.Models.Users
     {
         [MaxLength(32)]
         [Required]
-        public string Username { get; set; }
+        public override string UserName { get; set; }
 
         /*        [MaxLength(32)]
                 [Required]
@@ -27,7 +27,7 @@ namespace Entity.Models.Users
 
         [Required]
         public DateTime DOB { get; set; }
-        public string RegisterTimestamp { get; set; }
+        public string? RegisterTimestamp { get; set; }
 
         public virtual ICollection<Offer> Offers { get; set; }
     }

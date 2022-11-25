@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20221124024127_CarAppDB_v0.1")]
-    partial class CarAppDBv01
+    [Migration("20221124090357_CarAppDB_v0.2")]
+    partial class CarAppDBv02
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -201,7 +201,6 @@ namespace Entity.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RegisterTimestamp")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -211,13 +210,9 @@ namespace Entity.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
+                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(32)
-                        .HasColumnType("nvarchar(32)");
 
                     b.HasKey("Id");
 

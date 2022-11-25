@@ -20,7 +20,7 @@ namespace Entity
 
         public AppContext(DbContextOptions<AppContext> options) : base(options)
         {
-            Database.EnsureDeleted();
+/*            Database.EnsureDeleted();*/
             Database.EnsureCreated();
         }
 
