@@ -65,7 +65,7 @@ namespace WebAPI.Services
 
         private async Task<IdentityResult> RegisterNewUser(User user, string password)
         {
-            user.DOB = DateTime.Now;
+            user.RegisterTimestamp = DateTime.Now;
 
             var result = await _userManager.CreateAsync(user, password);
 
@@ -113,10 +113,6 @@ namespace WebAPI.Services
             }
 
             var user = _mapper.Map<User>(registerUser);
-
-            Console.WriteLine(user.UserName);
-
-            Console.WriteLine(Regex.IsMatch(user.UserName, @"^[A-Za-z0-9@_\.]+$"));
 
             var result = await RegisterNewUser(user, registerUser.Password);
 
