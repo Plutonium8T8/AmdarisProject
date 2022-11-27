@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20221124081911_CarAppDB_v0.1")]
-    partial class CarAppDBv01
+    [Migration("20221127185420_CarAppDb_v0.1")]
+    partial class CarAppDbv01
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -51,19 +51,6 @@ namespace Entity.Migrations
                     b.ToTable("CSVFiles");
                 });
 
-            modelBuilder.Entity("Entity.Models.Cars.Car", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Car");
-                });
-
             modelBuilder.Entity("Entity.Models.Offers.Offer", b =>
                 {
                     b.Property<long>("Id")
@@ -72,12 +59,33 @@ namespace Entity.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<string>("Brand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("ImpliedCarId")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Engine")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Extra")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -87,8 +95,6 @@ namespace Entity.Migrations
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ImpliedCarId");
 
                     b.HasIndex("UserId");
 
@@ -201,6 +207,7 @@ namespace Entity.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RegisterTimestamp")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -343,19 +350,11 @@ namespace Entity.Migrations
 
             modelBuilder.Entity("Entity.Models.Offers.Offer", b =>
                 {
-                    b.HasOne("Entity.Models.Cars.Car", "ImpliedCar")
-                        .WithMany()
-                        .HasForeignKey("ImpliedCarId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Entity.Models.Users.User", "User")
                         .WithMany("Offers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("ImpliedCar");
 
                     b.Navigation("User");
                 });

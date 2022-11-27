@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Entity.Migrations
 {
     /// <inheritdoc />
-    public partial class InitMigration : Migration
+    public partial class CarAppDbv01 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -53,18 +53,6 @@ namespace Entity.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Car",
-                columns: table => new
-                {
-                    Id = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Car", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -216,8 +204,13 @@ namespace Entity.Migrations
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Brand = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Location = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Engine = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ImpliedCarId = table.Column<long>(type: "bigint", nullable: false),
+                    Extra = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -227,12 +220,6 @@ namespace Entity.Migrations
                         name: "FK_Offers_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Offers_Car_ImpliedCarId",
-                        column: x => x.ImpliedCarId,
-                        principalTable: "Car",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -282,11 +269,6 @@ namespace Entity.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Offers_ImpliedCarId",
-                table: "Offers",
-                column: "ImpliedCarId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Offers_UserId",
                 table: "Offers",
                 column: "UserId");
@@ -324,9 +306,6 @@ namespace Entity.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.DropTable(
-                name: "Car");
         }
     }
 }
