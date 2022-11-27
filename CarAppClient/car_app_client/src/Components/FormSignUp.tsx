@@ -65,6 +65,7 @@ const FormSignUp = () =>
         <Box>
             <form onSubmit={handleSubmit}>
                 <Grid container className='FormGrid'>
+                    <Grid item xs={3}></Grid>
                     <Grid item xs={12} className="FormInputs">
                         <TextField className='FormTextField'
                             id="username-input"
@@ -73,6 +74,7 @@ const FormSignUp = () =>
                             type="text"
                             value={signinValues.username}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} className="FormInputs">
@@ -83,6 +85,7 @@ const FormSignUp = () =>
                             type="text"
                             value={signinValues.email}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} className="FormInputs">
@@ -93,6 +96,7 @@ const FormSignUp = () =>
                             type="text"
                             value={signinValues.phone}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} className="FormInputs">
@@ -103,6 +107,7 @@ const FormSignUp = () =>
                             type="password"
                             value={signinValues.password}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} className="FormInputs">
@@ -113,6 +118,7 @@ const FormSignUp = () =>
                             type="password"
                             value={signinValues.confirm}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item  xs={12}>
@@ -120,6 +126,7 @@ const FormSignUp = () =>
                             Sign Up
                         </Button>
                     </Grid>
+                    <Grid item xs={3}></Grid>
                 </Grid>
             </form>
         </Box>

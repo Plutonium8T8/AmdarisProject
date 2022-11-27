@@ -71,6 +71,7 @@ const FormLogIn = () =>
                             type="text"
                             value={loginValues.username}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} className="FormInputs">
@@ -81,6 +82,7 @@ const FormLogIn = () =>
                             type="password"
                             value={loginValues.password}
                             onChange={handleInputChange}
+                            fullWidth
                         />
                     </Grid>
                     <Grid item  xs={12}>

@@ -51,12 +51,10 @@ const LoginComponent = () =>
     return (
         <div>
             <Grid id='LoginGridContainer' container>
-                <Grid className='LoginGrid' item xs={2}></Grid>
-
-                <Grid className='LoginGrid' item xs={8}>
+                <Grid className='LoginGrid' item xs={12}>
                     <Grid container>
-                        <Grid item xs={7}></Grid>
-                        <Grid item xs={5} id='FormGrid'>
+                        <Grid item xs={2} sm={3} md={4} lg={4.5}></Grid>
+                        <Grid item xs={8} sm={6} md={4} lg={3} id='FormGrid'>
                             <Grid item xs={12}>
                                 <Tabs value={value} onChange={handleChange} centered>
                                     <Tab label="Sign up" {...a11yProps(0)} />
@@ -72,9 +70,9 @@ const LoginComponent = () =>
                                 </TabPanel>
                             </Grid>
                         </Grid>
+                        <Grid item xs={2} sm={3} md={4} lg={4.5}></Grid>
                     </Grid>
                 </Grid>
-                <Grid className='LoginGrid' item xs={2}></Grid>
             </Grid>
         </div>
     )

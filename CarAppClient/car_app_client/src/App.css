@@ -11,7 +11,7 @@
 
 #LoginGridContainer
 {
-  height: 100%; 
+  height: 80%; 
   width: 100%;
   align-items: center;
   padding-top: 1vh;
@@ -20,7 +20,7 @@
 
 .LoginGrid #FormGrid
 {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-bottom: 10%;
   height: 60vh;
 }
@@ -39,3 +39,44 @@
 {
   width: 15vw;
 }
+
+.MuiTabs-scrollButtons.Mui-disabled {
+  opacity: 0.3;
+}
+
+.css-heg063-MuiTabs-flexContainer
+{
+  float: right; 
+}
+
+#OfferGrid
+{
+  height: calc(40vh + 5px);
+  margin-bottom: 5vh;
+  margin-top: 1vh;
+  background-color: #1976d2;
+  border-radius: 6px;
+}
+
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.fill img {
+  flex-shrink: 0;
+  min-height: 100%;
+  max-width: auto;
+  max-height: 40vh;
+}
+
+#OfferBox
+{
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-right: 2vw;
+  border-radius: 0;
+  height: calc(38vh - 16px);
+}
+
