@@ -65,7 +65,7 @@ namespace WebAPI.Services
 
         private async Task<IdentityResult> RegisterNewUser(User user, string password)
         {
-            user.RegisterTimestamp = DateTime.Now;
+            user.RegisterTimestamp = DateTime.Now.ToString();
 
             var result = await _userManager.CreateAsync(user, password);
 
@@ -80,6 +80,9 @@ namespace WebAPI.Services
         public async Task<LoginUserResponseDTO> Login(LoginUserDTO loginUserDTO)
         {
             var checkUsername = _userRepository.GetUserByName(loginUserDTO.Username);
+
+            Console.WriteLine(loginUserDTO.Username);
+            Console.WriteLine(loginUserDTO.Password);
 
             var checkPassword = await _signInManager.PasswordSignInAsync(loginUserDTO.Username, loginUserDTO.Password, false, false);
 

@@ -1,13 +1,11 @@
 import { Button, Grid, TextField } from "@mui/material";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
 import * as yup from 'yup';
 
-const defaultValues = {
+const loginDefaultValues = {
     username: "",
-    email: "",
-    phone: "",
-    password: "",
-    repeat_password: ""
+    password: ""
 };
 
 const schema = yup.object(
@@ -18,14 +16,34 @@ const schema = yup.object(
 
 const FormLogIn = () =>
 {
-    const [formValues, setFormValues] = useState(defaultValues);
+    const [loginValues, setFormValues] = useState(loginDefaultValues);
     
+    const [cookies, setCookie, removeCookie] = useCookies(['token']);
+
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        await schema.isValid(formValues)
+        await schema.isValid(loginValues)
         .then((valid) => 
         {
-            console.log(valid)
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            var raw = JSON.stringify(loginValues);
+
+            var requestOptions : RequestInit = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+              };
+            
+            fetch("http://127.0.0.1:5000/auth/login", requestOptions)
+            .then(response => response.json())
+            .then(result => 
+            {
+                setCookie("token", result.token) 
+            })
+            .catch(error => console.log('error', error));
         })
         .catch((err) => {
             console.log(err.name);
@@ -36,7 +54,7 @@ const FormLogIn = () =>
     const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormValues({
-        ...formValues,
+        ...loginValues,
         [name]: value,
         });
     };
@@ -51,7 +69,7 @@ const FormLogIn = () =>
                             name="username"
                             label="Username"
                             type="text"
-                            value={formValues.username}
+                            value={loginValues.username}
                             onChange={handleInputChange}
                         />
                     </Grid>
@@ -61,7 +79,7 @@ const FormLogIn = () =>
                             name="password"
                             label="Password"
                             type="password"
-                            value={formValues.password}
+                            value={loginValues.password}
                             onChange={handleInputChange}
                         />
                     </Grid>

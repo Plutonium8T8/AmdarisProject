@@ -2,7 +2,7 @@ import { Box, Button, Grid, TextField } from "@mui/material";
 import { useState } from "react";
 import * as yup from 'yup';
 
-const defaultValues = {
+const defaultSigninValues = {
     username: "",
     email: "",
     phone: "",
@@ -23,17 +23,17 @@ const schema = yup.object(
 
 const FormSignUp = () =>
 {
-    const [formValues, setFormValues] = useState(defaultValues);
+    const [signinValues, setFormValues] = useState(defaultSigninValues);
     
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        await schema.isValid(formValues)
+        await schema.isValid(signinValues)
         .then((valid) => 
         {
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
 
-            var raw = JSON.stringify(formValues);
+            var raw = JSON.stringify(signinValues);
 
             var requestOptions : RequestInit = {
                 method: 'POST',
@@ -56,7 +56,7 @@ const FormSignUp = () =>
     const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
         const { name, value } = e.target;
         setFormValues({
-        ...formValues,
+        ...signinValues,
         [name]: value,
         });
     };    
@@ -71,7 +71,7 @@ const FormSignUp = () =>
                             name="username"
                             label="Username"
                             type="text"
-                            value={formValues.username}
+                            value={signinValues.username}
                             onChange={handleInputChange}
                         />
                     </Grid>
@@ -81,7 +81,7 @@ const FormSignUp = () =>
                             name="email"
                             label="Email"
                             type="text"
-                            value={formValues.email}
+                            value={signinValues.email}
                             onChange={handleInputChange}
                         />
                     </Grid>
@@ -91,7 +91,7 @@ const FormSignUp = () =>
                             name="phone"
                             label="Phone number"
                             type="text"
-                            value={formValues.phone}
+                            value={signinValues.phone}
                             onChange={handleInputChange}
                         />
                     </Grid>
@@ -101,7 +101,7 @@ const FormSignUp = () =>
                             name="password"
                             label="Password"
                             type="password"
-                            value={formValues.password}
+                            value={signinValues.password}
                             onChange={handleInputChange}
                         />
                     </Grid>
@@ -111,7 +111,7 @@ const FormSignUp = () =>
                             name="confirm"
                             label="Confirm"
                             type="password"
-                            value={formValues.confirm}
+                            value={signinValues.confirm}
                             onChange={handleInputChange}
                         />
                     </Grid>

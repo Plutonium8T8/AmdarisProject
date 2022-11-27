@@ -11,7 +11,6 @@ namespace WebAPI.Services.Interfaces
     {
         Task<LoginUserResponseDTO> Login(LoginUserDTO loginUserDto);
         Task LogOut();
-
         Task<UserResponseDTO> RegisterUser(RegisterUserDTO registerUserDto);
 
     }

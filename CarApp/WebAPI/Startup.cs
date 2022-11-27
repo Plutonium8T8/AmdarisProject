@@ -54,7 +54,6 @@ namespace WebAPI
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             services.AddCors();
-            services.AddSwaggerGen();
 
             services.AddIdentity<User, Role>(options =>
             {
@@ -120,8 +119,6 @@ namespace WebAPI
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             StripeConfiguration.ApiKey = GetSecrets.StripeSecretKey;
-
-            System.Console.WriteLine(StripeConfiguration.ApiKey);
 
             loggerFactory.AddFile("Logs/App-{Date}.txt");
 

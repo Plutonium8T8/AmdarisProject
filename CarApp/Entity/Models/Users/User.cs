@@ -27,7 +27,7 @@ namespace Entity.Models.Users
 
         [Required]
         public DateTime DOB { get; set; }
-        public DateTime RegisterTimestamp { get; set; }
+        public string RegisterTimestamp { get; set; }
 
         public virtual ICollection<Offer> Offers { get; set; }
     }
