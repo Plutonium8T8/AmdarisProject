@@ -11,6 +11,7 @@ namespace Entity.Repository.Interfaces
     {
         Task CreateOffer(Offer offer);
         Task<Offer> GetOfferById(long id);
+        Task<ICollection<Offer>> GetOffersByPage(Offer offer, int page);
         Task DeleteOffer(long id);
         Task UpdateOffer(Offer offer);
     }

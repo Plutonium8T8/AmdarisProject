@@ -25,7 +25,7 @@
   height: 60vh;
 }
 
-#FormGrid .FormInputs
+.FormGrid .FormInputs
 {
   margin-bottom: 3vh;
 }
@@ -33,6 +33,30 @@
 #SubmitButton
 {
   width: 10vw;
+}
+
+#DeleteButton
+{
+  margin-top: 3vh;
+  background-color: #ff2c2c;
+  width: 300px;
+}
+
+#LogoutButton
+{
+  margin-top: 3vh;
+  width: 300px;
+}
+
+#UploadButton
+{
+  width: 10vw;
+}
+
+#SettingsButton
+{
+  margin-top: 3vh;
+  width: 300px;
 }
 
 .FormTextField
@@ -59,16 +83,18 @@
 }
 
 .fill {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  overflow: hidden
+  overflow: hidden;
+  padding: 10px;
 }
 .fill img {
   flex-shrink: 0;
   min-height: 100%;
   max-width: auto;
-  max-height: 40vh;
+  max-height: 38vh;
+  margin-right: 3vw;
 }
 
 #OfferBox

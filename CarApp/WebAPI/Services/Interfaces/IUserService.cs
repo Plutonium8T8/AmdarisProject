@@ -10,6 +10,7 @@ namespace WebAPI.Services.Interfaces
     public interface IUserService
     {
         Task<UserResponseDTO> GetUser(long id);
+        Task<UserResponseDTO> GetUserByUsername(string username);
         Task UpdateUser(UserUpdateDTO userUpdateDto);
         Task DeleteUser(long id);
         Task<ICollection<OfferResoponseDTO>> GetUserOffers(long id);

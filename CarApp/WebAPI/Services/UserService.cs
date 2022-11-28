@@ -54,6 +54,17 @@ namespace WebAPI.Services
             return output;
         }
 
+        public async Task<UserResponseDTO> GetUserByUsername(string username)
+        {
+            var user = await _userRepository.GetUserByName(username);
+
+            checkExistance(user);
+
+            var output = _mapper.Map<UserResponseDTO>(user);
+
+            return output;
+        }
+
         public async Task<ICollection<OfferResoponseDTO>> GetUserOffers(long id)
         {
             var result = await _userRepository.GetOffers(id);

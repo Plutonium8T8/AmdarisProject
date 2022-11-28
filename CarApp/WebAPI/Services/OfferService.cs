@@ -48,6 +48,19 @@ namespace WebAPI.Services
             return output;
         }
 
+        public async Task<ICollection<OfferResoponseDTO>> GetOffersByPage(OfferCreateDTO offerResponse, int page)
+        {
+            var offer = _mapper.Map<Offer>(offerResponse);
+
+            var result = await _offersRepository.GetOffersByPage(offer, page);
+
+            if (result == null) throw new EntityNotFoundException("", "Offer does not exist!");
+
+            var output = _mapper.Map<ICollection<OfferResoponseDTO>>(result);
+
+            return output;
+        }
+
         public async Task UpdateOffer(OfferUpdateDTO offerUpdate)
         {
             // To Do structura ca la User Service

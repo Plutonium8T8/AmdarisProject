@@ -1,13 +1,13 @@
 import { Box, Button, Grid, Tab, Tabs, TextField, Typography } from "@mui/material";
 import React from "react";
 
-const Offer = () =>
+function Offer(props: { title: string, brand: string, extra: string, engine: string, location: string, price: string, model: string, srcimg: string})
 {
     return (
-        <Box>
+        <div>
             <Grid container id="OfferGrid">
                 <Grid item xs={12} sm={8} className="fill">
-                    <img src="https://www.cnet.com/a/img/resize/f5c9f9a4c5f0582568394887195e10c171c8b7d8/hub/2020/10/22/9d78c515-47ef-4fed-9122-c534a7ca8890/2020-mercedes-amg-c63-s-coupe-65.jpg?auto=webp&width=1200">
+                    <img src={props.srcimg}>
                     </img>
                 </Grid>
                 <Grid item xs={12} sm={4}>
@@ -32,31 +32,31 @@ const Offer = () =>
                     >
                         <Grid container>
                             <Grid item xs={12}>
-                                Title: Selling 2015 C63s Mercedes
+                                Title: {props.title}
                             </Grid>
                             <Grid item xs={12}>
-                                Car Brand: Mercedes
+                                Car Brand: {props.brand}
                             </Grid>
                             <Grid item xs={12}>
-                                Car Model: C63s
+                                Car Model: {props.model}
                             </Grid>
                             <Grid item xs={12}>
-                                Price: 50,000.00 usd
+                                Price: {props.price}
                             </Grid>
                             <Grid item xs={12}>
-                                Location: Hamburg, Germany, H3121
+                                Location: {props.location}
                             </Grid>
                             <Grid item xs={12}>
-                                Engine: 4.0L Twin-Turbo V8
+                                Engine: {props.engine}
                             </Grid>
                             <Grid item xs={12}>
-                                Extra: HUD, Heated Seats, etc.
+                                Extra: {props.extra}
                             </Grid>
                         </Grid>
                     </Box>
                 </Grid>
             </Grid>
-        </Box>
+        </div>
     )
 }
 

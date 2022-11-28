@@ -23,6 +23,13 @@ namespace Entity.Repository
             await Delete(res);
         }
 
+        public async Task<User> GetUserById(long id)
+        {
+            var res = await _context.Set<User>().FirstOrDefaultAsync(u => u.Id == id);
+            if (res == null) throw UserNotFound;
+            return res;
+        }
+
         public async Task<User> GetUserByName(string username)
         {
             var res = await _context.Set<User>().FirstOrDefaultAsync(u => u.UserName == username);

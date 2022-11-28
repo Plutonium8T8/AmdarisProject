@@ -18,7 +18,8 @@ const FormLogIn = () =>
 {
     const [loginValues, setFormValues] = useState(loginDefaultValues);
     
-    const [cookies, setCookie, removeCookie] = useCookies(['token']);
+    const [cookiesT, setCookieT, removeCookieT] = useCookies(['token']);
+    const [cookiesU, setCookieU, removeCookieU] = useCookies(['id']);
 
     const handleSubmit = async (event: { preventDefault: () => void; }) => {
         event.preventDefault();
@@ -41,7 +42,7 @@ const FormLogIn = () =>
             .then(response => response.json())
             .then(result => 
             {
-                setCookie("token", result.token) 
+                setCookieT("token", result.token);
             })
             .catch(error => console.log('error', error));
         })
@@ -49,6 +50,33 @@ const FormLogIn = () =>
             console.log(err.name);
             console.log(err.errors);
         })
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Authorization", "Bearer " + cookiesT.token)
+    
+        var requestOptions : RequestInit = {
+            method: 'GET',
+            headers: myHeaders,
+            redirect: 'follow'
+            };
+    
+        var url = "http://127.0.0.1:5000/users/" + loginValues.username
+    
+        console.log(url)
+    
+        var id
+    
+        await fetch(url, requestOptions)
+            .then(response => response.json())
+            .then(result => 
+            {
+                console.log(result)
+                id = result.id
+            })
+            .catch(error => console.log('error', error));
+    
+        setCookieU("id", id)
     };
 
     const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
@@ -62,7 +90,7 @@ const FormLogIn = () =>
     return(
         <div>
             <form onSubmit={handleSubmit}>
-                <Grid container>
+                <Grid container className="FormGrid">
                     <Grid item xs={12} className="FormInputs">
                         <TextField className='FormTextField'
                             id="username-input"

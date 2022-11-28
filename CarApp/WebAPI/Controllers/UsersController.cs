@@ -24,6 +24,14 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
+/*        [HttpGet("{username}")]
+        public async Task<IActionResult> GetUser(string username)
+        {
+            var result = await _userService.GetUserByUsername(username);
+
+            return Ok(result);
+        }*/
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(long id)
         {

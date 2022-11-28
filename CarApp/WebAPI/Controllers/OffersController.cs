@@ -24,8 +24,17 @@ namespace WebAPI.Controllers
             return Ok(result);
         }
 
+        [HttpPost("search/{page}")]
+        [AllowAnonymous]
+        public async Task<IActionResult> GetOffers([FromBody] OfferCreateDTO offerTransfer, int page)
+        {
+            var result = await _offersService.GetOffersByPage(offerTransfer, page);
+
+            return Ok(result);
+        }
+
         [HttpDelete("{id}")]
-        [Authorize(Roles = "Admin, User")]
+        /*[Authorize(Roles = "Admin, User")]*/
         public async Task<IActionResult> DeleteOffer(long id)
         {
             await _offersService.DeleteOffer(id);
@@ -42,7 +51,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost("add")]
-        [Authorize(Roles = "Admin, User")]
+        [AllowAnonymous]
         public async Task<IActionResult> CreateOffer([FromBody] OfferCreateDTO offerCreate)
         {
             await _offersService.CreateOffer(offerCreate);

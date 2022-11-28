@@ -7,7 +7,6 @@ namespace WebAPI.Model.DataTransferObject.Offer
 {
     public class OfferCreateDTO
     {
-        public long Id { get; set; }
         public string? Title { get; set; }
         public string? Brand { get; set; }
         public string? Model { get; set; }
@@ -16,6 +15,6 @@ namespace WebAPI.Model.DataTransferObject.Offer
         public string? Engine { get; set; }
         public string? Description { get; set; }
         public string? Extra { get; set; }
-        public long UserId { get; set; }
+        public long UserId  { get; set; }
     }
 }
