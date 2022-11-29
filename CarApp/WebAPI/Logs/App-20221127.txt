@@ -1337,3 +1337,5 @@ Microsoft.AspNetCore.Server.Kestrel.Core.BadHttpRequestException: Unexpected end
 2022-11-27T19:10:22.9598824-08:00 0HMMGTOB9RJHV:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
 2022-11-27T19:10:29.9571665-08:00 0HMMGTOB9RJI1:00000003 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
 2022-11-27T19:10:29.9594939-08:00 0HMMGTOB9RJI1:00000003 [WRN] The query uses a row limiting operator ('Skip'/'Take') without an 'OrderBy' operator. This may lead to unpredictable results. If the 'Distinct' operator is used after 'OrderBy', then make sure to use the 'OrderBy' operator after 'Distinct' as the ordering would otherwise get erased. (5b3e5b60)
+2022-11-27T20:44:29.3721511-08:00 0HMMGVCU1PQCF:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2022-11-27T21:14:52.9463961-08:00 0HMMGVTTH7M2I:00000002 [WRN] Failed to determine the https port for redirect. (ca76cc21)
